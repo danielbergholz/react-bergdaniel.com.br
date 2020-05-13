@@ -33,12 +33,19 @@ export const GlobalStyle = createGlobalStyle`
 
   }
 
+  svg {
+    cursor: pointer
+  }
+
   ul {
     list-style:none;
   }
 
   li {
     list-style-type: none;
+    text-transform: uppercase;
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    font-size: 30px;
   }
 
   a {
