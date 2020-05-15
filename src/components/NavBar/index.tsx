@@ -6,11 +6,13 @@ import { Background, Container, MenuDrawer } from './styles';
 
 const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [tab, setTab] = useState<number>(0);
 
   const handleOpen = useCallback(
     (close = false): void => {
       if (close) {
         setOpen(false);
+        setTab(0);
       } else {
         setOpen(!open);
       }
@@ -18,27 +20,40 @@ const NavBar: React.FC = () => {
     [open],
   );
 
+  const handleNewTab = useCallback((n: number): void => {
+    setOpen(false);
+    setTab(n);
+  }, []);
+
   return (
     <Background>
-      <Container>
+      <Container tab={tab}>
         <Link to="/" onClick={(): void => handleOpen(true)}>
           <p>berg</p>
         </Link>
         <FiMenu size={28} color="#fff" onClick={(): void => handleOpen()} />
         <ul>
           <FiSun size={28} color="#D4AE8B" />
-          <li>cursos</li>
-          <li>portfolio</li>
-          <Link to="contato">
+          <Link to="contato" onClick={(): void => handleNewTab(2)}>
+            <li>cursos</li>
+          </Link>
+          <Link to="contato" onClick={(): void => handleNewTab(3)}>
+            <li>portfolio</li>
+          </Link>
+          <Link to="contato" onClick={(): void => handleNewTab(4)}>
             <li>contato</li>
           </Link>
         </ul>
       </Container>
-      <MenuDrawer isOpen={open}>
+      <MenuDrawer isOpen={open} tab={tab}>
         <FiX size={28} color="#fff" onClick={(): void => handleOpen()} />
-        <li>cursos</li>
-        <li>portfolio</li>
-        <Link to="contato" onClick={handleOpen}>
+        <Link to="contato" onClick={(): void => handleNewTab(2)}>
+          <li>cursos</li>
+        </Link>
+        <Link to="contato" onClick={(): void => handleNewTab(3)}>
+          <li>portfolio</li>
+        </Link>
+        <Link to="contato" onClick={(): void => handleNewTab(4)}>
           <li>contato</li>
         </Link>
         <FiSun size={28} color="#D4AE8B" />

@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 interface MenuDrawerProps {
   isOpen: boolean;
+  tab: number;
+}
+
+interface ContainerProps {
+  tab: number;
 }
 
 export const Background = styled.div`
@@ -14,7 +19,7 @@ export const Background = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   margin: 0 auto;
   width: 80vw;
   display: flex;
@@ -22,6 +27,10 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  a:nth-child(${(props): number => props.tab}) {
+    color: #bb9878;
+  }
 
   p {
     text-transform: uppercase;
@@ -64,6 +73,10 @@ export const MenuDrawer = styled.ul<MenuDrawerProps>`
   height: 100vh;
   right: 0;
   display: ${(props): string => (props.isOpen ? 'block' : 'none')};
+
+  a:nth-child(${(props): number => props.tab}) {
+    color: #bb9878;
+  }
 
   svg:first-child {
     height: 44px;
