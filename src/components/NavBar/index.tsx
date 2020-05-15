@@ -34,10 +34,10 @@ const NavBar: React.FC = () => {
         <FiMenu size={28} color="#fff" onClick={(): void => handleOpen()} />
         <ul>
           <FiSun size={28} color="#D4AE8B" />
-          <Link to="contato" onClick={(): void => handleNewTab(2)}>
+          <Link to="cursos" onClick={(): void => handleNewTab(2)}>
             <li>cursos</li>
           </Link>
-          <Link to="contato" onClick={(): void => handleNewTab(3)}>
+          <Link to="portfolio" onClick={(): void => handleNewTab(3)}>
             <li>portfolio</li>
           </Link>
           <Link to="contato" onClick={(): void => handleNewTab(4)}>
@@ -47,10 +47,10 @@ const NavBar: React.FC = () => {
       </Container>
       <MenuDrawer isOpen={open} tab={tab}>
         <FiX size={28} color="#fff" onClick={(): void => handleOpen()} />
-        <Link to="contato" onClick={(): void => handleNewTab(2)}>
+        <Link to="cursos" onClick={(): void => handleNewTab(2)}>
           <li>cursos</li>
         </Link>
-        <Link to="contato" onClick={(): void => handleNewTab(3)}>
+        <Link to="portfolio" onClick={(): void => handleNewTab(3)}>
           <li>portfolio</li>
         </Link>
         <Link to="contato" onClick={(): void => handleNewTab(4)}>
