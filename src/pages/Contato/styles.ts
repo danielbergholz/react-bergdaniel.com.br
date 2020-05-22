@@ -1,15 +1,79 @@
 import styled from 'styled-components';
 
-interface FormProps {
-  netlify: boolean;
-}
-
 export const Container = styled.div`
   width: 80vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  margin-top: 60px;
+
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  input,
+  textarea {
+    width: 700px;
+    border: 1px solid #5c5c5c;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #5c5c5c;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #ababab;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: 1px solid #bb9878;
+  }
+
+  br + input {
+    margin-top: 6px;
+  }
+
+  textarea {
+    resize: none;
+    margin-top: 6px;
+    height: 200px;
+  }
+
+  button {
+    margin: 15px 0;
+    font-family: 'Anton', Helvetica, Arial;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #bb9878;
+    padding: 6px 14px;
+    transition: background-color 200ms;
+  }
+
+  button:hover {
+    background-color: #d4ae8b;
+  }
+
+  @media (max-width: 950px) {
+    input,
+    textarea {
+      width: 500px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    input,
+    textarea {
+      width: 288px;
+    }
+  }
 `;
 
 export const Contact = styled.div`
@@ -56,64 +120,4 @@ export const CopyToClipBoard = styled.div`
   display: flex;
   align-items: center;
   color: #fff;
-`;
-
-export const Form = styled.form<FormProps>`
-  margin-top: 60px;
-
-  h1 {
-    margin-bottom: 15px;
-  }
-
-  input,
-  textarea {
-    width: 700px;
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 6px;
-    background-color: #5c5c5c;
-    font-size: 16px;
-    color: #fff;
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: #ababab;
-  }
-
-  br + input {
-    margin-top: 5px;
-  }
-
-  textarea {
-    resize: none;
-    margin-top: 5px;
-    height: 200px;
-  }
-
-  button {
-    margin: 15px 0;
-    font-family: 'Anton', Helvetica, Arial;
-    text-transform: uppercase;
-    font-size: 20px;
-    border: 0;
-    border-radius: 6px;
-    color: #fff;
-    background-color: #bb9878;
-    padding: 6px 14px;
-  }
-
-  @media (max-width: 950px) {
-    input,
-    textarea {
-      width: 500px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    input,
-    textarea {
-      width: 288px;
-    }
-  }
 `;

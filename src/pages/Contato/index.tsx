@@ -3,13 +3,7 @@ import React from 'react';
 import { FaGithub, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 import FotoPerfil from '../../assets/foto_perfil.png';
-import {
-  Container,
-  SocialMedia,
-  CopyToClipBoard,
-  Form,
-  Contact,
-} from './styles';
+import { Container, SocialMedia, CopyToClipBoard, Contact } from './styles';
 
 const Contato: React.FC = () => {
   return (
@@ -55,7 +49,7 @@ const Contato: React.FC = () => {
           </a>
         </SocialMedia>
       </Contact>
-      <Form name="contact" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <h1>Entre em contato</h1>
         <input type="text" name="name" placeholder="Nome" />
         <br />
@@ -66,7 +60,7 @@ const Contato: React.FC = () => {
         <textarea name="description" placeholder="Descrição" cols={120} />
         <br />
         <button type="submit">enviar</button>
-      </Form>
+      </form>
     </Container>
   );
 };
