@@ -46,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style-type: none;
     text-transform: uppercase;
-    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    font-family: 'Anton', Helvetica, Arial;
     font-size: 30px;
   }
 
