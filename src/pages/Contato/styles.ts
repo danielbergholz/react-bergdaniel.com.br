@@ -7,9 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   text-align: center;
 
-  margin-top: 60px;
-
   h1 {
+    margin-top: 60px;
     margin-bottom: 15px;
   }
 
@@ -79,7 +78,7 @@ export const Container = styled.div`
 export const Contact = styled.div`
   display: flex;
   place-content: center;
-  margin-top: 60px;
+  margin-top: 40px;
 
   a {
     margin-top: 6px;
