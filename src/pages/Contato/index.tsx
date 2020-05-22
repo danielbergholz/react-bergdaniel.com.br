@@ -49,7 +49,7 @@ const Contato: React.FC = () => {
           </a>
         </SocialMedia>
       </Contact>
-      <form name="contact" netlify>
+      <form name="contact" data-netlify="true">
         <h1>Entre em contato</h1>
         <input type="text" name="name" placeholder="Nome" />
         <br />
