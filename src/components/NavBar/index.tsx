@@ -31,7 +31,7 @@ const NavBar: React.FC = () => {
         <Link to="/" onClick={(): void => handleOpen(true)}>
           <p>berg</p>
         </Link>
-        <FiMenu size={28} color="#fff" onClick={(): void => handleOpen()} />
+        <FiMenu size={28} onClick={(): void => handleOpen()} />
         <ul>
           <FiSun size={28} color="#D4AE8B" />
           <Link to="cursos" onClick={(): void => handleNewTab(2)}>
@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
         </ul>
       </Container>
       <MenuDrawer isOpen={open} tab={tab}>
-        <FiX size={28} color="#fff" onClick={(): void => handleOpen()} />
+        <FiX size={28} onClick={(): void => handleOpen()} />
         <Link to="cursos" onClick={(): void => handleNewTab(2)}>
           <li>cursos</li>
         </Link>
