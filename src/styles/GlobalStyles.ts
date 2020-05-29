@@ -1,4 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+  createGlobalStyle,
+  css,
+  FlattenSimpleInterpolation,
+} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -18,9 +22,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background-color: #444444;
     -webkit-font-smoothing: antialiased !important;
-    color: #fafafa;
+    transition: background-color 300ms;
   }
 
 
@@ -53,4 +56,49 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration:none;
   }
+
+  ${(props): FlattenSimpleInterpolation =>
+    props.theme === 'dark'
+      ? css`
+          body {
+            background-color: #444444;
+            color: #fafafa;
+          }
+
+          svg {
+            color: #fafafa;
+          }
+
+          p {
+            color: #fafafa;
+          }
+
+          input,
+          textarea {
+            border: 1px solid #5c5c5c;
+            background-color: #5c5c5c;
+            color: #fff;
+          }
+        `
+      : css`
+          body {
+            background-color: #f0f0f0;
+            color: #272727;
+          }
+
+          svg {
+            color: #272727;
+          }
+
+          p {
+            color: #272727;
+          }
+
+          input,
+          textarea {
+            border: 1px solid #e3e3e3;
+            background-color: #e3e3e3;
+            color: #858585;
+          }
+        `}
 `;

@@ -80,6 +80,7 @@ export const MenuDrawer = styled.ul<MenuDrawerProps>`
 
   svg:first-child {
     height: 44px;
+    color: #fafafa;
     margin-left: calc(90% - 24px);
   }
 

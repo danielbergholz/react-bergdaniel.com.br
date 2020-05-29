@@ -11,20 +11,6 @@ export const Container = styled.div`
     margin-top: 60px;
     margin-bottom: 15px;
   }
-
-  @media (max-width: 950px) {
-    input,
-    textarea {
-      width: 500px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    input,
-    textarea {
-      width: 288px;
-    }
-  }
 `;
 
 export const Contact = styled.div`
@@ -77,12 +63,9 @@ export const Form = styled.form`
   input,
   textarea {
     width: 700px;
-    border: 1px solid #5c5c5c;
     padding: 10px 15px;
     border-radius: 6px;
-    background-color: #5c5c5c;
     font-size: 16px;
-    color: #fff;
   }
 
   input::placeholder,
@@ -115,5 +98,19 @@ export const Form = styled.form`
 
   button:hover {
     background-color: #d4ae8b;
+  }
+
+  @media (max-width: 950px) {
+    input,
+    textarea {
+      width: 500px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    input,
+    textarea {
+      width: 288px;
+    }
   }
 `;
