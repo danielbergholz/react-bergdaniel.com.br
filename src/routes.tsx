@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import { GlobalStyle } from './styles/GlobalStyles';
+
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Contato from './pages/Contato';
@@ -9,6 +11,7 @@ import Portfolio from './pages/Portfolio';
 
 const Routes: React.FC = () => (
   <BrowserRouter>
+    <GlobalStyle />
     <NavBar />
     <Switch>
       <Route path="/" exact component={Home} />
