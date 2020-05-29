@@ -12,54 +12,6 @@ export const Container = styled.div`
     margin-bottom: 15px;
   }
 
-  input,
-  textarea {
-    width: 700px;
-    border: 1px solid #5c5c5c;
-    padding: 10px 15px;
-    border-radius: 6px;
-    background-color: #5c5c5c;
-    font-size: 16px;
-    color: #fff;
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: #ababab;
-  }
-
-  input:focus,
-  textarea:focus {
-    border: 1px solid #bb9878;
-  }
-
-  br + input {
-    margin-top: 6px;
-  }
-
-  textarea {
-    resize: none;
-    margin-top: 6px;
-    height: 200px;
-  }
-
-  button {
-    margin: 15px 0;
-    font-family: 'Anton', Helvetica, Arial;
-    text-transform: uppercase;
-    font-size: 20px;
-    border: 0;
-    border-radius: 6px;
-    color: #fff;
-    background-color: #bb9878;
-    padding: 6px 14px;
-    transition: background-color 200ms;
-  }
-
-  button:hover {
-    background-color: #d4ae8b;
-  }
-
   @media (max-width: 950px) {
     input,
     textarea {
@@ -119,4 +71,49 @@ export const CopyToClipBoard = styled.div`
   display: flex;
   align-items: center;
   color: #fff;
+`;
+
+export const Form = styled.form`
+  input,
+  textarea {
+    width: 700px;
+    border: 1px solid #5c5c5c;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #5c5c5c;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #ababab;
+  }
+
+  br + input {
+    margin-top: 6px;
+  }
+
+  textarea {
+    resize: none;
+    margin-top: 6px;
+    height: 200px;
+  }
+
+  button {
+    margin: 15px 0;
+    font-family: 'Anton', Helvetica, Arial;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #bb9878;
+    padding: 6px 14px;
+    transition: background-color 200ms;
+  }
+
+  button:hover {
+    background-color: #d4ae8b;
+  }
 `;
