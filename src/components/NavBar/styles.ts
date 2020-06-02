@@ -95,8 +95,33 @@ export const MenuDrawer = styled.ul<MenuDrawerProps>`
 
   @media (max-width: 700px) {
     width: 50vw;
+    animation-name: menuDrawerAnimation700;
+    animation-duration: 200ms;
   }
+
   @media (max-width: 460px) {
     width: 70vw;
+    animation-name: menuDrawerAnimation460;
+    animation-duration: 200ms;
+  }
+
+  @keyframes menuDrawerAnimation700 {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 50vw;
+    }
+  }
+
+  @keyframes menuDrawerAnimation460 {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 70vw;
+    }
   }
 `;
