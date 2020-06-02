@@ -36,7 +36,7 @@ const AstroMuri: React.FC = () => {
           {' '}
           Esse projeto foi um desafio do início ao fim. Fomos contratados como
           estagiários de TI em uma empresa de marketing digital que não tinha
-          esperiência prévia com desenvolvimento de software, ou seja, não
+          experiência prévia com desenvolvimento de software, ou seja, não
           haviam desenvolvedores mais experientes para mentorar a gente, fizemos
           tudo sozinhos.
         </span>
