@@ -41,7 +41,7 @@ export const Container = styled.div`
 export const Project = styled.div`
   cursor: pointer;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   align-items: center;
 
   img {
@@ -62,6 +62,6 @@ export const Project = styled.div`
 
 export const Text = styled.div`
   @media (max-width: 700px) {
-    margin: 10px 0 30px 0;
+    margin: 10px 0 10px 0;
   }
 `;
