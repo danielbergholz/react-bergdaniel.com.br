@@ -41,6 +41,7 @@ export const Container = styled.div`
 export const Project = styled.div`
   cursor: pointer;
   display: flex;
+  margin-bottom: 40px;
   align-items: center;
 
   img {
