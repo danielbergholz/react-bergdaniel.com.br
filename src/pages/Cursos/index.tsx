@@ -11,7 +11,7 @@ const Cursos: React.FC = () => {
           <Thumbnail>
             <img
               src="https://i.ytimg.com/vi/pL9nX6Ac2Lc/mqdefault.jpg"
-              alt=""
+              alt="Javascript"
             />
           </Thumbnail>
           <span> Curso de Javascript</span>
@@ -20,7 +20,7 @@ const Cursos: React.FC = () => {
           <Thumbnail>
             <img
               src="https://i.ytimg.com/vi/VRR3V42EdSg/mqdefault.jpg"
-              alt=""
+              alt="Terminal Linux"
             />
           </Thumbnail>
           <span> Curso de Terminal Linux</span>
@@ -29,7 +29,7 @@ const Cursos: React.FC = () => {
           <Thumbnail>
             <img
               src="https://i.ytimg.com/vi/ck7WWHaAgpU/mqdefault.jpg"
-              alt=""
+              alt="Trello"
             />
           </Thumbnail>
           <span> Curso de Trello</span>

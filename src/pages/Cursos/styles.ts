@@ -40,6 +40,9 @@ export const Thumbnail = styled.div`
 
   img {
     border-radius: 5px;
+    font-family: 'Anton', Helvetica, sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
   }
 
   > p {
@@ -72,7 +75,10 @@ export const Course = styled.div`
   }
 `;
 
-export const Gold = styled.p`
+export const Gold = styled.span`
   display: inline;
   color: #ebce00;
+  font-family: 'Anton', Helvetica, sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
 `;
