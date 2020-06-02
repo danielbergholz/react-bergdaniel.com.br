@@ -42,26 +42,26 @@ const NavBar: React.FC = () => {
           ) : (
             <FaMoon size={22} color="#D4AE8B" onClick={changeTheme} />
           )}
-          <Link to="cursos" onClick={(): void => handleNewTab(2)}>
+          <Link to="/cursos" onClick={(): void => handleNewTab(2)}>
             <li>cursos</li>
           </Link>
-          <Link to="portfolio" onClick={(): void => handleNewTab(3)}>
+          <Link to="/portfolio" onClick={(): void => handleNewTab(3)}>
             <li>portfolio</li>
           </Link>
-          <Link to="contato" onClick={(): void => handleNewTab(4)}>
+          <Link to="/contato" onClick={(): void => handleNewTab(4)}>
             <li>contato</li>
           </Link>
         </ul>
       </Container>
       <MenuDrawer isOpen={open} tab={tab}>
         <FiX size={28} onClick={(): void => handleOpen()} />
-        <Link to="cursos" onClick={(): void => handleNewTab(2)}>
+        <Link to="/cursos" onClick={(): void => handleNewTab(2)}>
           <li>cursos</li>
         </Link>
-        <Link to="portfolio" onClick={(): void => handleNewTab(3)}>
+        <Link to="/portfolio" onClick={(): void => handleNewTab(3)}>
           <li>portfolio</li>
         </Link>
-        <Link to="contato" onClick={(): void => handleNewTab(4)}>
+        <Link to="/contato" onClick={(): void => handleNewTab(4)}>
           <li>contato</li>
         </Link>
         {theme === 'dark' ? (

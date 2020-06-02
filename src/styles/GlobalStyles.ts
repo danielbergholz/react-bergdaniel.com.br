@@ -83,6 +83,10 @@ export const GlobalStyle = createGlobalStyle`
             color: #fafafa;
           }
 
+          a {
+            color: #fafafa;
+          }
+
           input,
           textarea {
             border: 1px solid #5c5c5c;
@@ -101,6 +105,10 @@ export const GlobalStyle = createGlobalStyle`
           }
 
           p {
+            color: #272727;
+          }
+
+          a {
             color: #272727;
           }
 
