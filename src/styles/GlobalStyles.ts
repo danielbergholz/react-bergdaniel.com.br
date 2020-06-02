@@ -57,6 +57,16 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration:none;
   }
 
+  @keyframes loadAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity:1
+    }
+  }
+
   ${(props): FlattenSimpleInterpolation =>
     props.theme === 'dark'
       ? css`

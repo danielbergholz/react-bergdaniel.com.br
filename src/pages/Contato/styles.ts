@@ -6,6 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  animation: loadAnimation;
+  animation-duration: 500ms;
 
   h1 {
     margin-top: 60px;

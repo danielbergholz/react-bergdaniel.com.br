@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 80vw;
   margin: 0 auto;
+  animation: loadAnimation;
+  animation-duration: 500ms;
+
   @media (max-width: 700px) {
     width: 90vw;
   }
