@@ -17,6 +17,11 @@ export const Background = styled.div`
   a {
     color: #fff;
   }
+
+  svg {
+    animation-name: loadAnimation;
+    animation-duration: 400ms;
+  }
 `;
 
 export const Container = styled.div<ContainerProps>`
