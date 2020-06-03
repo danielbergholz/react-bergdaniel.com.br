@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-interface MenuDrawerProps {
-  isOpen: boolean;
-  tab: number;
-}
-
 interface ContainerProps {
   tab: number;
+  isOpen: boolean;
 }
 
 export const Background = styled.div`
@@ -24,6 +20,39 @@ export const Background = styled.div`
   }
 `;
 
+export const MenuBar = styled.span`
+  width: 30px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #fff;
+  display: block;
+  transition: all 400ms;
+`;
+
+export const MenuIcon = styled.a<ContainerProps>`
+  cursor: pointer;
+  display: none;
+
+  & ${MenuBar}:nth-child(1) {
+    transform: ${(props): string =>
+      props.isOpen ? 'rotate(45deg) translate3d(5px, 4px, 0)' : ''};
+  }
+
+  & ${MenuBar}:nth-child(2) {
+    margin: 6px 0;
+    opacity: ${(props): number => (props.isOpen ? 0 : 1)};
+  }
+
+  & ${MenuBar}:nth-child(3) {
+    transform: ${(props): string =>
+      props.isOpen ? 'rotate(-45deg) translate3d(9px, -8px, 0)' : ''};
+  }
+
+  @media (max-width: 700px) {
+    display: block;
+  }
+`;
+
 export const Container = styled.div<ContainerProps>`
   margin: 0 auto;
   width: 80vw;
@@ -31,7 +60,6 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 
   a:nth-child(${(props): number => props.tab}) {
     color: #bb9878;
@@ -46,6 +74,7 @@ export const Container = styled.div<ContainerProps>`
 
   li {
     margin-left: 25px;
+    transition: color 400ms ease;
   }
 
   ul {
@@ -54,79 +83,37 @@ export const Container = styled.div<ContainerProps>`
     align-items: center;
   }
 
-  > svg {
-    display: none;
-  }
-
   @media (max-width: 700px) {
     width: 90vw;
 
-    > svg {
-      display: block;
-    }
-
     ul {
-      display: none;
-    }
-  }
-`;
-
-export const MenuDrawer = styled.ul<MenuDrawerProps>`
-  position: absolute;
-  background-color: #272727;
-  top: 0px;
-  height: 100vh;
-  right: 0;
-  display: ${(props): string => (props.isOpen ? 'block' : 'none')};
-
-  a:nth-child(${(props): number => props.tab}) {
-    color: #bb9878;
-  }
-
-  svg:first-child {
-    height: 44px;
-    color: #fafafa;
-    margin-left: calc(90% - 24px);
-  }
-
-  li {
-    padding: 10px 0 10px 25px;
-    border-bottom: solid 1px #737373;
-  }
-
-  svg:last-child {
-    margin: 20px 0 0 25px;
-  }
-
-  @media (max-width: 700px) {
-    width: 50vw;
-    animation-name: menuDrawerAnimation700;
-    animation-duration: 200ms;
-  }
-
-  @media (max-width: 460px) {
-    width: 70vw;
-    animation-name: menuDrawerAnimation460;
-    animation-duration: 200ms;
-  }
-
-  @keyframes menuDrawerAnimation700 {
-    0% {
-      width: 0;
+      z-index: 10;
+      position: fixed;
+      top: 42px;
+      left: ${(props): string => (props.isOpen ? '50%' : '100%')};
+      display: ${(props): string => (props.isOpen ? 'block' : 'none')};
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #272727;
+      width: 80vw;
+      height: 100vh;
+      transition: left 0.4s ease;
     }
 
-    100% {
-      width: 50vw;
-    }
-  }
-
-  @keyframes menuDrawerAnimation460 {
-    0% {
-      width: 0;
+    svg {
+      order: 1;
+      margin-left: 20px;
+      margin-top: 10px;
+      display: inline-block;
     }
 
-    100% {
-      width: 70vw;
+    li {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #737373;
+      padding: 10px 0 10px 25px;
+      margin-left: 0;
     }
   }
 `;
