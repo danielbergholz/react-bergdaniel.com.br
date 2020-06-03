@@ -12,11 +12,12 @@ export const Background = styled.div`
 
   a {
     color: #fff;
+    font-family: 'Anton', Helvetica, sans-serif;
   }
 
   svg {
     animation-name: loadAnimation;
-    animation-duration: 400ms;
+    animation-duration: 250ms;
   }
 `;
 
@@ -26,7 +27,7 @@ export const MenuBar = styled.span`
   border-radius: 1px;
   background-color: #fff;
   display: block;
-  transition: all 400ms;
+  transition: all 250ms;
 `;
 
 export const MenuIcon = styled.a<ContainerProps>`
@@ -61,7 +62,7 @@ export const Container = styled.div<ContainerProps>`
   justify-content: space-between;
   align-items: center;
 
-  a:nth-child(${(props): number => props.tab}) {
+  li:nth-child(${(props): number => props.tab}) a {
     color: #bb9878;
   }
 
@@ -74,7 +75,7 @@ export const Container = styled.div<ContainerProps>`
 
   li {
     margin-left: 25px;
-    transition: color 400ms ease;
+    transition: color 250ms ease;
   }
 
   ul {
