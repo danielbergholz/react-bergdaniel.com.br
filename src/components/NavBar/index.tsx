@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from 'react';
-import { FiSun, FiMenu, FiX } from 'react-icons/fi';
+import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import { useTheme } from '../../context/theme';
-import { Background, Container, MenuDrawer } from './styles';
+import { Background, Container, MenuIcon, MenuBar } from './styles';
 
 const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -31,45 +31,38 @@ const NavBar: React.FC = () => {
 
   return (
     <Background>
-      <Container tab={tab}>
+      <Container tab={tab} isOpen={open}>
         <Link to="/" onClick={(): void => handleOpen(true)}>
           <p>berg</p>
         </Link>
-        <FiMenu size={28} color="#fafafa" onClick={(): void => handleOpen()} />
+        <MenuIcon onClick={(): void => handleOpen()} isOpen={open} tab={tab}>
+          <MenuBar />
+          <MenuBar />
+          <MenuBar />
+        </MenuIcon>
         <ul>
           {theme === 'dark' ? (
             <FiSun size={28} color="#D4AE8B" onClick={changeTheme} />
           ) : (
             <FaMoon size={22} color="#D4AE8B" onClick={changeTheme} />
           )}
-          <Link to="/cursos" onClick={(): void => handleNewTab(2)}>
-            <li>cursos</li>
-          </Link>
-          <Link to="/portfolio" onClick={(): void => handleNewTab(3)}>
-            <li>portfolio</li>
-          </Link>
-          <Link to="/contato" onClick={(): void => handleNewTab(4)}>
-            <li>contato</li>
-          </Link>
+          <li>
+            <Link to="/cursos" onClick={(): void => handleNewTab(2)}>
+              cursos
+            </Link>
+          </li>
+          <li>
+            <Link to="/portfolio" onClick={(): void => handleNewTab(3)}>
+              portfolio
+            </Link>
+          </li>
+          <li>
+            <Link to="/contato" onClick={(): void => handleNewTab(4)}>
+              contato
+            </Link>
+          </li>
         </ul>
       </Container>
-      <MenuDrawer isOpen={open} tab={tab}>
-        <FiX size={28} onClick={(): void => handleOpen()} />
-        <Link to="/cursos" onClick={(): void => handleNewTab(2)}>
-          <li>cursos</li>
-        </Link>
-        <Link to="/portfolio" onClick={(): void => handleNewTab(3)}>
-          <li>portfolio</li>
-        </Link>
-        <Link to="/contato" onClick={(): void => handleNewTab(4)}>
-          <li>contato</li>
-        </Link>
-        {theme === 'dark' ? (
-          <FiSun size={28} color="#D4AE8B" onClick={changeTheme} />
-        ) : (
-          <FaMoon size={22} color="#D4AE8B" onClick={changeTheme} />
-        )}
-      </MenuDrawer>
     </Background>
   );
 };
