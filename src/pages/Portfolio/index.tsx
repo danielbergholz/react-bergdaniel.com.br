@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, Project, Text } from './styles';
 import berg from '../../assets/berg.png';
 import astroMuri from '../../assets/astro_muri.png';
+import logoBgRoxo from '../../assets/logo_bg_roxo.png';
 
 const Portfolio: React.FC = () => {
   return (
@@ -51,7 +52,7 @@ const Portfolio: React.FC = () => {
           <Text>
             <strong>
               - Função:
-              <span> Desenvolvedor Frontend</span>
+              <span> Desenvolvedor Frontend, Designer</span>
             </strong>
             <br />
             <strong>
@@ -67,6 +68,21 @@ const Portfolio: React.FC = () => {
           </Text>
         </Project>
       </Link>
+
+      <Project>
+        <img src={logoBgRoxo} alt="BERG" />
+        <Text>
+          <strong>
+            - Função:
+            <span> Fundador, Desenvolvedor Fullstack</span>
+          </strong>
+          <br />
+          <strong>
+            - Descrição:
+            <span> Mais detalhes em breve</span>
+          </strong>
+        </Text>
+      </Project>
     </Container>
   );
 };
