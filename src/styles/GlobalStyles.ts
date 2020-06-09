@@ -4,6 +4,8 @@ import {
   FlattenSimpleInterpolation,
 } from 'styled-components';
 
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
 export const GlobalStyle = createGlobalStyle`
   *{
     margin: 0;
