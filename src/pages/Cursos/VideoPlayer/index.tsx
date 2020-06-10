@@ -128,7 +128,7 @@ const VideoPlayer: React.FC = () => {
                 >
                   <Download>
                     <span>Download</span>
-                    <IoMdDownload color="#D4AE8B" size={28} />
+                    <IoMdDownload color="#D4AE8B" size={20} />
                   </Download>
                 </a>
               )}
@@ -149,7 +149,12 @@ const VideoPlayer: React.FC = () => {
             <NextVideos>
               <PerfectScrollbar>
                 {data.map((video) => {
-                  const { position, thumbnails, shortTitle } = video.snippet;
+                  const {
+                    position,
+                    thumbnails,
+                    shortTitle,
+                    mediumTitle,
+                  } = video.snippet;
                   return (
                     <Video
                       key={String(position)}
@@ -157,6 +162,7 @@ const VideoPlayer: React.FC = () => {
                     >
                       <img src={thumbnails.medium.url} alt="" />
                       <span>{shortTitle}</span>
+                      <small>{mediumTitle}</small>
                     </Video>
                   );
                 })}
