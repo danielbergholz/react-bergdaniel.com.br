@@ -30,6 +30,9 @@ interface Video {
     shortTitle: string;
     position: number;
     description: string;
+    resourceId: {
+      videoId: string;
+    };
     thumbnails: {
       medium: {
         url: string;
@@ -39,13 +42,23 @@ interface Video {
 }
 
 const VideoPlayer: React.FC = () => {
+  const { state } = useLocation<LocationState>();
+
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<Video[]>([]);
-  const [selectedVideo, setSelectedVideo] = useState<Video>({
-    snippet: { position: 0 },
-  } as Video);
+  const [selectedVideo, setSelectedVideo] = useState<Video>(() => {
+    const lastVideoWatched = localStorage.getItem(
+      `@bergdaniel:${state.playlistId}`,
+    );
 
-  const { state } = useLocation<LocationState>();
+    if (!lastVideoWatched) {
+      return {
+        snippet: { position: 0 },
+      } as Video;
+    }
+
+    return JSON.parse(lastVideoWatched);
+  });
 
   useEffect(() => {
     api
@@ -75,17 +88,23 @@ const VideoPlayer: React.FC = () => {
 
         setData(filteredData);
 
-        setSelectedVideo(response.data.items[0]);
+        if (!selectedVideo.snippet.resourceId) {
+          setSelectedVideo(response.data.items[0]);
+        }
 
         setLoading(false);
       });
-  }, [state.playlistId]);
+  }, [state.playlistId, selectedVideo.snippet.resourceId]);
 
   const changeVideo = useCallback(
     (id: number) => {
       setSelectedVideo(data[id]);
+      localStorage.setItem(
+        `@bergdaniel:${state.playlistId}`,
+        JSON.stringify(data[id]),
+      );
     },
-    [data],
+    [data, state.playlistId],
   );
 
   return (
@@ -116,7 +135,7 @@ const VideoPlayer: React.FC = () => {
             </UpperTitle>
             <iframe
               title="videoPlayer"
-              src={`https://www.youtube.com/embed/videoseries?list=${state.playlistId}&index=${selectedVideo.snippet.position}&rel=0`}
+              src={`https://www.youtube.com/embed/${selectedVideo.snippet.resourceId.videoId}?rel=0`}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
