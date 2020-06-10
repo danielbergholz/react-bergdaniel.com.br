@@ -3,11 +3,15 @@ import React, { createContext, useState, useCallback, useContext } from 'react';
 interface ThemeContextData {
   theme: 'light' | 'dark';
   changeTheme(): void;
+  lockScroll: boolean;
+  lock(): void;
 }
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 
 export const ThemeProvider: React.FC = ({ children }) => {
+  const [lockScroll, setLockScroll] = useState(false);
+
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const chosedTheme = localStorage.getItem('@bergdaniel:theme');
 
@@ -20,7 +24,6 @@ export const ThemeProvider: React.FC = ({ children }) => {
   });
 
   const changeTheme = useCallback(() => {
-    // setTheme(theme === 'dark' ? 'light' : 'dark');
     if (theme === 'dark') {
       setTheme('light');
       localStorage.setItem('@bergdaniel:theme', 'light');
@@ -30,8 +33,12 @@ export const ThemeProvider: React.FC = ({ children }) => {
     }
   }, [theme]);
 
+  const lock = useCallback(() => {
+    setLockScroll(!lockScroll);
+  }, [lockScroll]);
+
   return (
-    <ThemeContext.Provider value={{ theme, changeTheme }}>
+    <ThemeContext.Provider value={{ theme, changeTheme, lockScroll, lock }}>
       {children}
     </ThemeContext.Provider>
   );

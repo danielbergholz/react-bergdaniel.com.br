@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [tab, setTab] = useState<number>(0);
 
-  const { changeTheme, theme } = useTheme();
+  const { changeTheme, theme, lock } = useTheme();
 
   const handleOpen = useCallback(
     (close = false): void => {
@@ -20,14 +20,19 @@ const NavBar: React.FC = () => {
       } else {
         setOpen(!open);
       }
+      lock();
     },
-    [open],
+    [open, lock],
   );
 
-  const handleNewTab = useCallback((n: number): void => {
-    setOpen(false);
-    setTab(n);
-  }, []);
+  const handleNewTab = useCallback(
+    (n: number): void => {
+      setOpen(false);
+      setTab(n);
+      lock();
+    },
+    [lock],
+  );
 
   return (
     <Background>

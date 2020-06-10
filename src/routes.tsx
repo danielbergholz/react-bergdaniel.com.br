@@ -14,11 +14,11 @@ import BergDaniel from './pages/Portfolio/BergDaniel';
 import VideoPlayer from './pages/Cursos/VideoPlayer';
 
 const Routes: React.FC = () => {
-  const { theme } = useTheme();
+  const { theme, lockScroll } = useTheme();
 
   return (
     <BrowserRouter>
-      <GlobalStyle theme={theme} />
+      <GlobalStyle theme={theme} lock={lockScroll} />
       <NavBar />
       <Switch>
         <Route path="/" exact component={Home} />

@@ -6,7 +6,11 @@ import {
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
-export const GlobalStyle = createGlobalStyle`
+interface GlobalStyleProps {
+  lock: boolean;
+}
+
+export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   *{
     margin: 0;
     padding: 0;
@@ -26,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     -webkit-font-smoothing: antialiased !important;
     transition: background-color 300ms;
+    overflow: ${(props): string => (props.lock === true ? 'hidden' : 'auto')};
   }
 
 
