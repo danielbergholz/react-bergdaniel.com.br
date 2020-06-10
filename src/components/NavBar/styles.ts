@@ -17,7 +17,7 @@ export const Background = styled.div`
 
   svg {
     animation-name: loadAnimation;
-    animation-duration: 200ms;
+    animation-duration: 150ms;
   }
 `;
 
@@ -27,7 +27,7 @@ export const MenuBar = styled.span`
   border-radius: 1px;
   background-color: #fff;
   display: block;
-  transition: all 200ms;
+  transition: all 150ms;
 `;
 
 export const MenuIcon = styled.a<ContainerProps>`
@@ -75,7 +75,7 @@ export const Container = styled.div<ContainerProps>`
 
   li {
     margin-left: 25px;
-    transition: color 200ms ease;
+    transition: color 150ms ease;
   }
 
   ul {
