@@ -4,7 +4,7 @@ interface ThemeContextData {
   theme: 'light' | 'dark';
   changeTheme(): void;
   lockScroll: boolean;
-  lock(): void;
+  lock(lockBool: boolean): void;
 }
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
@@ -33,9 +33,16 @@ export const ThemeProvider: React.FC = ({ children }) => {
     }
   }, [theme]);
 
-  const lock = useCallback(() => {
-    setLockScroll(!lockScroll);
-  }, [lockScroll]);
+  const lock = useCallback(
+    (lockBool: boolean) => {
+      if (lockBool) {
+        setLockScroll(!lockScroll);
+      } else {
+        setLockScroll(lockBool);
+      }
+    },
+    [lockScroll],
+  );
 
   return (
     <ThemeContext.Provider value={{ theme, changeTheme, lockScroll, lock }}>

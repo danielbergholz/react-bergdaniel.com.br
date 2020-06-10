@@ -17,10 +17,11 @@ const NavBar: React.FC = () => {
       if (close) {
         setOpen(false);
         setTab(0);
+        lock(false);
       } else {
         setOpen(!open);
+        lock(true);
       }
-      lock();
     },
     [open, lock],
   );
@@ -29,7 +30,7 @@ const NavBar: React.FC = () => {
     (n: number): void => {
       setOpen(false);
       setTab(n);
-      lock();
+      lock(false);
     },
     [lock],
   );
