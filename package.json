@@ -17,6 +17,7 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-toastify": "^6.0.5",
     "styled-components": "^5.1.0",
     "typescript": "~3.7.2"
   },

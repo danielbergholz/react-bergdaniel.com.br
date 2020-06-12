@@ -5,6 +5,7 @@ import {
 } from 'styled-components';
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface GlobalStyleProps {
   lock: boolean;
