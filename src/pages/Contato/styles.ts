@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+
+interface FormProps {
+  loading: number;
+}
 
 export const Container = styled.div`
   width: 80vw;
@@ -61,7 +65,7 @@ export const CopyToClipBoard = styled.div`
   color: #fff;
 `;
 
-export const Form = styled.form`
+export const Form = styled.form<FormProps>`
   input,
   textarea {
     width: 700px;
@@ -96,6 +100,16 @@ export const Form = styled.form`
     background-color: #bb9878;
     padding: 6px 14px;
     transition: background-color 200ms;
+    ${(props): FlattenSimpleInterpolation =>
+      props.loading === 1
+        ? css`
+            opacity: 0.7;
+            pointer-events: none;
+          `
+        : css`
+            pointer-events: all;
+            opacity: 1;
+          `}
   }
 
   button:hover {
