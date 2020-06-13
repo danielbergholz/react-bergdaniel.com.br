@@ -71,7 +71,7 @@ const Cursos: React.FC = () => {
           <span> Curso de Trello</span>
         </Course>
         <Course>
-          <Thumbnail>
+          <Thumbnail id="thumbnail">
             <p> em breve</p>
           </Thumbnail>
           <span> Curso de CSS</span>
@@ -83,19 +83,19 @@ const Cursos: React.FC = () => {
       </p>
       <CourseList>
         <Course>
-          <Thumbnail>
+          <Thumbnail id="thumbnail">
             <p> em breve</p>
           </Thumbnail>
           <span> Curso de React</span>
         </Course>
         <Course>
-          <Thumbnail>
+          <Thumbnail id="thumbnail">
             <p> em breve</p>
           </Thumbnail>
           <span> Curso de React Native</span>
         </Course>
         <Course>
-          <Thumbnail>
+          <Thumbnail id="thumbnail">
             <p> em breve</p>
           </Thumbnail>
           <span> Curso de Node</span>

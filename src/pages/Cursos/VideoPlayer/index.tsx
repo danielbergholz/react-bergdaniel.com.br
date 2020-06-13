@@ -146,7 +146,7 @@ const VideoPlayer: React.FC = () => {
             <NextVideoTitle>
               <strong>Próximas aulas</strong>
             </NextVideoTitle>
-            <NextVideos>
+            <NextVideos id="next-videos">
               <PerfectScrollbar>
                 {data.map((video) => {
                   const {

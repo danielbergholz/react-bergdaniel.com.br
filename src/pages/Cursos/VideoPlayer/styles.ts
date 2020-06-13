@@ -199,7 +199,6 @@ export const NextVideos = styled.div`
   border-bottom-right-radius: 5px;
   height: 679px;
   text-align: center;
-  background-color: #333;
 
   span {
     margin-bottom: 5px;

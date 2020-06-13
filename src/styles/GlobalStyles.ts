@@ -101,6 +101,14 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
             background-color: #5c5c5c;
             color: #fff;
           }
+
+          #thumbnail {
+            background-color: #717171;
+          }
+
+          #next-videos {
+            background-color: #333;
+          }
         `
       : css`
           body {
@@ -125,6 +133,14 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
             border: 1px solid #e3e3e3;
             background-color: #e3e3e3;
             color: #858585;
+          }
+
+          #thumbnail {
+            background-color: #c4c4c4;
+          }
+
+          #next-videos {
+            background-color: #4f4f4f;
           }
         `}
 `;

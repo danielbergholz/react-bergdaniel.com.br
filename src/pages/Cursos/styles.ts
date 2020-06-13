@@ -31,7 +31,6 @@ export const Container = styled.div`
 export const Thumbnail = styled.div`
   height: 180px;
   width: 320px;
-  background-color: #717171;
   display: flex;
   align-items: center;
   justify-content: center;
