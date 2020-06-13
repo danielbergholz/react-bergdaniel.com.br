@@ -36,7 +36,7 @@ const Contato: React.FC = () => {
     ) {
       toast('📝 Favor preencher todos os campos', {
         position: 'top-center',
-        autoClose: 5000,
+        autoClose: 4000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -51,9 +51,9 @@ const Contato: React.FC = () => {
       return;
     }
 
-    toast.info('🤔 Enviando e-mail...', {
+    toast.info('📤 Enviando e-mail...', {
       position: 'top-center',
-      autoClose: 5000,
+      autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -71,9 +71,9 @@ const Contato: React.FC = () => {
     })
       .then((response) => {
         if (response.status === 200) {
-          toast.success('👌 E-mail enviado com sucesso!', {
+          toast.success('🚀 E-mail enviado com sucesso!', {
             position: 'top-center',
-            autoClose: 5000,
+            autoClose: 4000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -84,7 +84,7 @@ const Contato: React.FC = () => {
         } else {
           toast.error('😓 Erro ao enviar o e-mail', {
             position: 'top-center',
-            autoClose: 5000,
+            autoClose: 4000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -105,7 +105,7 @@ const Contato: React.FC = () => {
       .catch(() => {
         toast.error('😓 Erro ao enviar o e-mail', {
           position: 'top-center',
-          autoClose: 5000,
+          autoClose: 4000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -175,7 +175,7 @@ const Contato: React.FC = () => {
       </Form>
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={4000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
