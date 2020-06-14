@@ -22,7 +22,7 @@ const Cursos: React.FC = () => {
           >
             <Thumbnail>
               <img
-                src="https://i.ytimg.com/vi/pL9nX6Ac2Lc/mqdefault.jpg"
+                src="https://i.ytimg.com/vi/pL9nX6Ac2Lc/maxresdefault.jpg"
                 alt="Javascript"
               />
             </Thumbnail>
@@ -43,7 +43,7 @@ const Cursos: React.FC = () => {
           >
             <Thumbnail>
               <img
-                src="https://i.ytimg.com/vi/VRR3V42EdSg/mqdefault.jpg"
+                src="https://i.ytimg.com/vi/VRR3V42EdSg/maxresdefault.jpg"
                 alt="Terminal Linux"
               />
             </Thumbnail>
@@ -63,7 +63,7 @@ const Cursos: React.FC = () => {
           >
             <Thumbnail>
               <img
-                src="https://i.ytimg.com/vi/ck7WWHaAgpU/mqdefault.jpg"
+                src="https://i.ytimg.com/vi/ck7WWHaAgpU/maxresdefault.jpg"
                 alt="Trello"
               />
             </Thumbnail>

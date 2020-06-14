@@ -38,6 +38,8 @@ export const Thumbnail = styled.div`
   cursor: pointer;
 
   img {
+    width: 320px;
+    height: 180px;
     border-radius: 5px;
     font-family: 'Anton', Helvetica, sans-serif;
     font-size: 32px;
