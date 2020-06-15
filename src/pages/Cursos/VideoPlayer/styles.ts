@@ -35,6 +35,7 @@ export const FlexboxLeft = styled.div`
   iframe {
     width: inherit;
     height: 720px;
+    border-radius: 5px;
   }
 
   > span {
@@ -129,10 +130,10 @@ export const FlexboxLeft = styled.div`
   }
 
   @media (max-width: 440px) {
-    width: 256px;
+    width: 320px;
 
     iframe {
-      height: 144px;
+      height: 180px;
     }
 
     > p {
@@ -172,7 +173,7 @@ export const FlexboxRight = styled.div`
   }
 
   @media (max-width: 440px) {
-    width: 256px;
+    width: 320px;
   }
 `;
 
