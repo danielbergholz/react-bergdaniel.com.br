@@ -243,6 +243,7 @@ export const Video = styled.div`
   }
 
   small {
+    color: #fff;
     display: none;
     font-family: 'Roboto', Helvetica, Arial;
     font-size: 14px;
