@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <Section>
         <p>
           Meu nome é Daniel Bergholz, sou Desenvolvedor Frontend com foco nas
-          tecnologias: React JS, React Native e Node JS
+          tecnologias: React JS e Node JS
         </p>
         <SocialMedia>
           <a
