@@ -65,7 +65,7 @@ const VideoPlayer: React.FC = () => {
       .get('/playlistItems', {
         params: {
           part: 'snippet',
-          key: 'AIzaSyCKVwDesbjwt8D8AgTBcWuttCe0eu8dECM',
+          key: process.env.REACT_APP_YOUTUBE_API_KEY,
           maxResults: 50,
           playlistId: state.playlistId,
         },
