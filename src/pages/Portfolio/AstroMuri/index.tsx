@@ -31,7 +31,7 @@ const AstroMuri: React.FC = () => {
         <span> Firebase, Google Cloud</span>
       </strong>
       <strong>
-        - Descrição completa:
+        - Contexto:
         <span>
           {' '}
           Esse projeto foi um desafio do início ao fim. Fomos contratados como
@@ -39,6 +39,25 @@ const AstroMuri: React.FC = () => {
           experiência prévia com desenvolvimento de software, ou seja, não
           haviam desenvolvedores mais experientes para mentorar a gente, fizemos
           tudo sozinhos.
+        </span>
+      </strong>
+      <strong>
+        - Descrição técnica:
+        <span>
+          {' '}
+          A equipe optou por desenvolver um aplicativo híbrido (para não
+          precisarmos de 2 equipes) com react native (pois já tinhamos
+          experiência prévia com react). Contudo, ninguém tinha conhecimento de
+          backend, infraestrutura, devops etc, então eu sugeri utilizarmos o
+          firebase como backend e banco de dados. E a pesar do firestore do
+          firebase ser um banco noSQL, ele nos atendeu bem, por que não existe
+          nenhum relacionamento entre os dados salvos. Para gerenciamento de
+          estados usamos redux, e eu implementei a parte de pagamento com o
+          pagseguro (que não tinha suporte para aplicativos híbridos, então tive
+          que criar um webview para usar a biblioteca deles). E como
+          intermediário entre o pagseguro e o aplicativo, desenvolvemos uma API
+          em node (para inserir algumas chaves de API na requisição para o
+          pagseguro) e fizemos o deploy no google cloud functions.
         </span>
       </strong>
       <ButtonContainer>

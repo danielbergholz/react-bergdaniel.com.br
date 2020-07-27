@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       </Hello>
       <Section>
         <p>
-          Meu nome é Daniel Bergholz, sou Desenvolvedor Frontend com foco nas
+          Meu nome é Daniel Bergholz, sou Desenvolvedor Fullstack com foco nas
           tecnologias: React JS e Node JS
         </p>
         <SocialMedia>

@@ -27,7 +27,7 @@ const BergDaniel: React.FC = () => {
         <span> Netlify</span>
       </strong>
       <strong>
-        - Descrição completa:
+        - Contexto:
         <span>
           {' '}
           A principal função desse site era ser o meu portfolio, mas eu quis ir
@@ -35,9 +35,20 @@ const BergDaniel: React.FC = () => {
           dos melhores recursos para se estudar um assunto novo, porém existem
           muitas distrações no site. Então coloquei aqui todos os meus cursos
           gratuitos publicados no YouTube, para assim, meus seguidores
-          conseguirem ter melhor foco para estudar. E para tornar isso possível,
-          tive que consumir a API do YouTube para pegar dados de playlists e
-          vídeos.
+          conseguirem ter melhor foco para estudar.
+        </span>
+      </strong>
+      <strong>
+        - Descrição técnica:
+        <span>
+          {' '}
+          Para tornar isso possível, tive que consumir a API do YouTube para
+          pegar dados de playlists e vídeos. Usei a arquitetura de single page
+          application (SPA) com React e Typescript para a página ter um UX
+          melhor e mais fluido. O botão de trocar o tema de light para dark foi
+          feito com o react context. O site final é estático, então consegui
+          hospedar no Netlify, e o formulário da aba de contato foi realizado
+          com a ajuda de um serviço chamado Formspree.
         </span>
       </strong>
       <ButtonContainer>

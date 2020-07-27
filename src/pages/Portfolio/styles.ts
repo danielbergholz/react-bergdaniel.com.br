@@ -39,10 +39,15 @@ export const Container = styled.div`
 `;
 
 export const Project = styled.div`
-  cursor: pointer;
   display: flex;
   margin-bottom: 20px;
   align-items: center;
+
+  button {
+    margin-top: 14px;
+    padding: 8px;
+    font-size: 19px;
+  }
 
   img {
     border-radius: 6px;
@@ -52,6 +57,10 @@ export const Project = styled.div`
 
   @media (max-width: 700px) {
     flex-direction: column;
+
+    button {
+      margin: 14px auto 0 auto;
+    }
 
     img {
       margin: 0 auto;

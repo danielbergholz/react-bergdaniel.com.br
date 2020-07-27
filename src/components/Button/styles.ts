@@ -10,6 +10,11 @@ export const StyledButton = styled.button`
   font-family: 'Anton', Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 21px;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: #d4ae8b;
+  }
 
   svg {
     margin-right: 10px;
