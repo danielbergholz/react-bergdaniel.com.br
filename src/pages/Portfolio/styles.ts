@@ -50,6 +50,7 @@ export const Project = styled.div`
   }
 
   img {
+    width: 165px;
     border-radius: 6px;
     display: inline;
     margin-right: 15px;

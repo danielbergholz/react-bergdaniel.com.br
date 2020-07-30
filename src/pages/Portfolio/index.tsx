@@ -5,6 +5,7 @@ import { Container, Project, Text } from './styles';
 import Button from '../../components/Button';
 import berg from '../../assets/berg.png';
 import astroMuri from '../../assets/astro_muri.png';
+import upwork from '../../assets/upwork.png';
 import logoBgRoxo from '../../assets/logo_bg_roxo.png';
 import bossaBox from '../../assets/bossabox.jpeg';
 
@@ -43,6 +44,25 @@ const Portfolio: React.FC = () => {
           </strong>
 
           <Button link="https://app.bossabox.com/u/daniel-bergholz">
+            Ver mais
+          </Button>
+        </Text>
+      </Project>
+
+      <Project>
+        <img src={upwork} alt="Upwork" />
+        <Text>
+          <strong>
+            - Função:
+            <span> Desenvolvedor Fullstack</span>
+          </strong>
+          <br />
+          <strong>
+            - Descrição:
+            <span> Estou disponível como freelancer na plataforma Upwork.</span>
+          </strong>
+
+          <Button link="https://www.upwork.com/o/profiles/users/~01d7d71fa714d6ce9d/">
             Ver mais
           </Button>
         </Text>
